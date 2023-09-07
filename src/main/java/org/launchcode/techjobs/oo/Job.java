@@ -50,6 +50,15 @@ public class Job {
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
 
+    @Override
+    public String toString() {
+        for ()
+        return System.lineSeparator() + "ID: " + this.getId() + "\nName: " + this.getName() + "\nEmployer: " +
+                this.getEmployer() + "\nLocation: " + this.getLocation() + "\nPosition Type: " + this.getPositionType()
+                + "\nCore Competency: " + this.getCoreCompetency() + System.lineSeparator();
+
+    }
+
 
     public int getId() {
         return id;
