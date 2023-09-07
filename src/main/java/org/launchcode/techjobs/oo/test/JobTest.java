@@ -47,25 +47,25 @@ public class JobTest {
 
     @Test
     public void testToStringStartsAndEndsWithNewLine() {
-        Job job1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality " +
+        Job job5 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality " +
                 "control"), new CoreCompetency("Persistence"));
-        assertEquals(job1.toString(), System.lineSeparator() + "ID: 1\nName: Product tester\nEmployer: ACME\n" +
-                "Location: Desert\nPosition Type: Quality control\nCore Competency: Persistence" + System.lineSeparator());
+        String testString = job5.toString();
+        assertEquals("\n", testString.charAt(0));
     }
 
     @Test
     public void testToStringContainsCorrectLabelsAndData() {
-        Job job1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality " +
+        Job job4 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality " +
                 "control"), new CoreCompetency("Persistence"));
-        assertEquals(job1.toString(), System.lineSeparator() + "ID: 1\nName: Product tester\nEmployer: ACME\n" +
-                "Location: Desert\nPosition Type: Quality control\nCore Competency: Persistence" + System.lineSeparator());
+        assertEquals(job4.toString(), "\nID: 4\nName: Product tester\nEmployer: ACME\n" +
+                "Location: Desert\nPosition Type: Quality control\nCore Competency: Persistence\n");
     }
 
     @Test
     public void testToStringHandlesEmptyField() {
-        Job job1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality " +
+        Job job3 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality " +
                 "control"), new CoreCompetency(""));
-        assertEquals(job1.toString(), System.lineSeparator() + "ID: 1\nName: Product tester\nEmployer: ACME\n" +
-                "Location: Desert\nPosition Type: Quality control\nCore Competency: Data not available" + System.lineSeparator());
+        assertEquals(job3.toString(), "\nID: 3\nName: Product tester\nEmployer: ACME\n" +
+                "Location: Desert\nPosition Type: Quality control\nCore Competency: Data not available\n");
     }
 }

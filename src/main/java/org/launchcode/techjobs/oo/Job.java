@@ -52,10 +52,20 @@ public class Job {
 
     @Override
     public String toString() {
-        for ()
-        return System.lineSeparator() + "ID: " + this.getId() + "\nName: " + this.getName() + "\nEmployer: " +
-                this.getEmployer() + "\nLocation: " + this.getLocation() + "\nPosition Type: " + this.getPositionType()
-                + "\nCore Competency: " + this.getCoreCompetency() + System.lineSeparator();
+
+        String nameString = (this.getName() != null && !this.getName().isEmpty()) ? this.getName() : "Data not " +
+                "available";
+        String employerString = (this.getEmployer().getValue() != null && !Objects.equals(this.getEmployer().getValue(), "")) ?
+                String.valueOf(this.getEmployer()) : "Data not available";
+        String locationString = (this.getLocation() != null && !Objects.equals(this.getLocation().getValue(), "")) ?
+                String.valueOf(this.getLocation()) : "Data not available";
+        String positionTypeString = (this.getPositionType() != null && !Objects.equals(this.getPositionType().getValue(), "")) ?
+                String.valueOf(this.getPositionType()) : "Data not available";
+        String coreCompetencyString = (this.getCoreCompetency() != null && !Objects.equals(this.getCoreCompetency().getValue(), "")) ?
+                String.valueOf(this.getCoreCompetency()) : "Data not available";
+        return System.lineSeparator() + "ID: " + this.getId() + "\nName: " + nameString + "\nEmployer: " +
+                employerString + "\nLocation: " + locationString + "\nPosition Type: " + positionTypeString
+                + "\nCore Competency: " + coreCompetencyString + "\n";
 
     }
 
