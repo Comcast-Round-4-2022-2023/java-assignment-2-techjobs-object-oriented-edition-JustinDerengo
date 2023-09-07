@@ -63,7 +63,7 @@ public class Job {
                 String.valueOf(this.getPositionType()) : "Data not available";
         String coreCompetencyString = (this.getCoreCompetency() != null && !Objects.equals(this.getCoreCompetency().getValue(), "")) ?
                 String.valueOf(this.getCoreCompetency()) : "Data not available";
-        return System.lineSeparator() + "ID: " + this.getId() + "\nName: " + nameString + "\nEmployer: " +
+        return "\nID: " + this.getId() + "\nName: " + nameString + "\nEmployer: " +
                 employerString + "\nLocation: " + locationString + "\nPosition Type: " + positionTypeString
                 + "\nCore Competency: " + coreCompetencyString + "\n";
 

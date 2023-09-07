@@ -50,7 +50,8 @@ public class JobTest {
         Job job5 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality " +
                 "control"), new CoreCompetency("Persistence"));
         String testString = job5.toString();
-        assertEquals("\n", testString.charAt(0));
+        assertEquals('\n', testString.charAt(0));
+        assertEquals('\n', testString.charAt(testString.length() -1));
     }
 
     @Test
